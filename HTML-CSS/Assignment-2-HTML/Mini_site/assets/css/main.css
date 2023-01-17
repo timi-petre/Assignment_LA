@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rowdies&display=swap');
+
+html {
+	height: 100%;
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 1em;
+
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url('https://images.unsplash.com/photo-1543961955-5efef0ac54d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80')
+			no-repeat fixed center;
+	background-size: cover;
+}
+
+em {
+	font-family: 'La Belle Aurore', cursive;
+}
+
+h1,
+h2,
+li {
+	font-family: 'Rowdies', cursive;
+}
+
+h1 {
+	font-size: 2em;
+	height: 50px;
+	margin: 0 auto;
+	padding: 10px;
+	text-align: center;
+	background-color: #ddd;
+	color: rgb(0, 0, 0);
+	border-radius: 10px;
+}
+
+h1:hover {
+	color: rgb(224, 73, 13);
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+#container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 20px auto;
+}
+
+a > img,
+img {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-bottom: 5px;
+}
+
+nav {
+	box-sizing: border-box;
+}
+
+nav ul {
+	list-style: none;
+	float: left;
+	margin: 25px;
+	padding: 10px;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 10px;
+}
+
+nav li {
+	text-align: center;
+}
+
+nav a {
+	color: black;
+	display: block;
+	padding: 16px 5px;
+	text-decoration: none;
+}
+
+nav a:hover {
+	background-color: #ddd;
+	color: rgb(224, 73, 13);
+	border-radius: 10px;
+}
+
+section,
+table {
+	display: inline-block;
+	width: 100%;
+	max-width: 800px;
+	margin: 25px;
+	padding: 10px;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 10px;
+	box-sizing: border-box;
+}
+
+article {
+	margin: 10px 0;
+	padding: 10px;
+}
+
+footer {
+	padding: 16px 0 16px 0;
+	text-align: center;
+	color: #fff;
+}
+
+.header {
+	margin-bottom: 10px;
+}
+
+div.scroll {
+	max-height: 800px;
+	overflow: scroll;
+	scroll-behavior: smooth;
+	text-overflow: ellipsis;
+}
+
+img {
+	max-width: 100%;
+	float: left;
+	margin: 0 10px 10px 0;
+	margin: 10px 20px;
+}
+
+p {
+	line-height: 1.5em;
+	font-size: 1.1em;
+	text-indent: 3%;
+}
+
+.moretext {
+	white-space: nowrap;
+	max-height: 10rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.clear {
+	clear: both;
+}
+
+@media screen and (max-width: 600px) {
+	#container {
+		width: 100%;
+		max-width: 100%;
+		margin: 0;
+	}
+	nav ul {
+		width: 100%;
+		max-width: 100%;
+		margin: 0;
+		color: white;
+		background-color: rgb(97, 93, 93);
+	}
+
+	section,
+	table {
+		width: 100%;
+		max-width: 100%;
+		margin: 0;
+	}
+}

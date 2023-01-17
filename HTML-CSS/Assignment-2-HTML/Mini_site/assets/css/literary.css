@@ -1,0 +1,39 @@
+/* Table */
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	margin: 0 auto;
+}
+
+th {
+	padding: 18px;
+	text-transform: capitalize;
+}
+
+td {
+	padding: 12px;
+}
+
+th,
+td {
+	border: solid 1px #e6e6e6;
+}
+
+tr {
+	background-color: #ededed;
+}
+
+tr.even {
+	background-color: #f7f7f7;
+}
+
+tr:hover {
+	background-color: #f2f2f2;
+	cursor: pointer;
+}
+
+#heading {
+	background-color: rgb(224, 73, 13);
+	color: white;
+}
