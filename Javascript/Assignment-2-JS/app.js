@@ -15,7 +15,7 @@ switch (result) {
 	case '*':
 		alert(`${a} * ${b} = ${a * b}`);
 		break;
-	case '*':
+	case '/':
 		alert(`${a} / ${b} = ${a / b}`);
 		break;
 
