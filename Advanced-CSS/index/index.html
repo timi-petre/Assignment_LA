@@ -21,7 +21,10 @@
 				content: ' New';
 				color: yellow;
 			}
-			div + :not(p:first-child) + p:hover {
+			/* div + :not(p:first-child) + p:hover {
+				font-style: italic;
+			} */
+			div ~ p:nth-of-type(3):hover {
 				font-style: italic;
 			}
 		</style>
