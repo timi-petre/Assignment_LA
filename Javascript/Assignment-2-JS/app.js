@@ -5,12 +5,7 @@ const a = +prompt('Primul numar: ', 3);
 const result = prompt('Operatia: ', op);
 const b = +prompt('Al doilea numar: ', 10);
 
-if (
-	typeof a === 'number' &&
-	!Number.isNaN(a) &&
-	typeof b === 'number' &&
-	!Number.isNaN(b)
-) {
+if (!isNaN(a) && !isNaN(b)) {
 	switch (result) {
 		case '+':
 			alert(`${a} + ${b} = ${a + b}`);
@@ -32,7 +27,7 @@ if (
 			break;
 
 		default:
-			alert(`Te rog introdu date corecte!`);
+			alert(`Operatie Invalida`);
 			break;
 	}
 } else {
