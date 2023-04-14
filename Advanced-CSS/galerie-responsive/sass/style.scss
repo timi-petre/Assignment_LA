@@ -1,0 +1,87 @@
+@import "colors";
+@import "values";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    width: $same-width;
+}
+
+@mixin basis($value) {
+    flex-basis: $value;
+}
+
+@mixin font-fig($value) {
+    font-size: $value;
+}
+
+h3 {
+    font-weight: normal;
+}
+
+p {
+    margin: 20px 10px;
+    padding: 20px;
+    @include font-fig(0.9em);
+}
+
+figure {
+    background-color: $figure-color;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 0 0 10px 0;
+    box-shadow: 0 2px 5px $figure-shadow-color;
+
+    & > figcaption {
+        text-align: center;
+        @include font-fig($font);
+    }
+
+    & > .placeholder {
+        background-color: $primary-color;
+        width: $same-width;
+        z-index: 1;
+        border-radius: 5px 5px 0 0;
+    }
+}
+
+#container {
+    max-width: 960px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#header {
+    margin: 15px;
+}
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+.column {
+    @include basis(20%);
+    padding: 8px;
+    transition: flex-basis 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+    .column {
+        @include basis(33.33%);
+    }
+    figcaption {
+        @include font-fig(1.2vmax);
+    }
+}
+@media screen and (max-width: 414px) {
+    .column {
+        @include basis(100%);
+    }
+    figcaption {
+        @include font-fig(13px);
+    }
+}

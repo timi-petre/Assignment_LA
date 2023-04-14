@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  width: 100%;
+}
+
+h3 {
+  font-weight: normal;
+}
+
+p {
+  margin: 20px 10px;
+  padding: 20px;
+  font-size: 0.9em;
+}
+
+figure {
+  background-color: #faf7ff;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 0 0 10px 0;
+  box-shadow: 0 2px 5px rgba(136, 136, 136, 0.3294117647);
+}
+figure > figcaption {
+  text-align: center;
+  font-size: 15px;
+}
+figure > .placeholder {
+  background-color: #6ba2d9;
+  width: 100%;
+  z-index: 1;
+  border-radius: 5px 5px 0 0;
+}
+
+#container {
+  max-width: 960px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#header {
+  margin: 15px;
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.column {
+  flex-basis: 20%;
+  padding: 8px;
+  transition: flex-basis 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .column {
+    flex-basis: 33.33%;
+  }
+  figcaption {
+    font-size: 1.2vmax;
+  }
+}
+@media screen and (max-width: 414px) {
+  .column {
+    flex-basis: 100%;
+  }
+  figcaption {
+    font-size: 13px;
+  }
+}/*# sourceMappingURL=style.css.map */
