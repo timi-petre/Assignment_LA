@@ -1,0 +1,30 @@
+body {
+	font-family: 'Quicksand', sans-serif;
+}
+
+/****************************Navbar******************************************/
+
+nav a {
+	color: grey;
+	margin-left: 24px;
+	font-size: 0.9em;
+}
+
+nav a:hover {
+	color: grey;
+}
+
+nav a:visited {
+	color: grey;
+}
+
+#hero-section p {
+	position: absolute;
+	top: 150px;
+	left: 420px;
+	right: 0;
+	display: block;
+	width: 28%;
+	padding-left: 0;
+	background-color: #32c486;
+}
