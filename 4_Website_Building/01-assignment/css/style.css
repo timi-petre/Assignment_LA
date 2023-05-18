@@ -1,30 +1,43 @@
 body {
 	font-family: 'Quicksand', sans-serif;
+	background-color: #f3f1ea;
 }
 
-/****************************Navbar******************************************/
+/****************************HEADER SECTION******************************************/
 
-nav a {
+.nav a {
 	color: grey;
-	margin-left: 24px;
-	font-size: 0.9em;
+	font-size: 1em;
+	padding-left: 17px;
 }
 
-nav a:hover {
+.nav a:hover {
 	color: grey;
 }
 
-nav a:visited {
+.nav a:visited {
 	color: grey;
+}
+
+.nav a.active {
+	color: black;
+}
+
+/****************************HERO SECTION******************************************/
+#hero-section {
+	background-image: url(../imgs/hero.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	height: 65vh;
 }
 
 #hero-section p {
 	position: absolute;
-	top: 150px;
-	left: 420px;
+	top: 100px;
+	left: 120px;
 	right: 0;
 	display: block;
-	width: 28%;
-	padding-left: 0;
+	width: 40%;
 	background-color: #32c486;
 }
