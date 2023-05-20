@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,43 +9,41 @@
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap"
-			rel="stylesheet"
-		/>
+		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet" />
 
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
+
 	<body>
-		<header class="py-3">
-			<div class="container-fluid">
-				<div class="row mx-5">
-					<div class="col-3">
-						<h1 class="fs-3 mx-5">My Website</h1>
+		<header class="py-3 sticky-xl-top header-bg">
+			<div class="container-fluid ">
+				<div class="row mx-4 ">
+					<div class="col-2 offset-1">
+						<h1 class="fs-3 mx-2">My Website</h1>
 					</div>
-					<div class="col-9">
-						<ul class="nav justify-content-end mx-5">
+					<div class="col-8 offset-1">
+						<ul class="nav justify-content-end mx-5 ">
 							<li class="nav-item">
 								<a class="nav-link active" href="#">Home</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Portfolio</a>
+								<a class="nav-link" href="#recent-work-section">Portfolio</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="#">Staff</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Features</a>
+								<a class="nav-link" href="#intro-section">Features</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Blog</a>
+								<a class="nav-link" href="#from-blog-section">Blog</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="#">Contact</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Download</a>
+								<a class="nav-link" href="#info-section">Download</a>
 							</li>
 						</ul>
 					</div>
@@ -65,14 +64,10 @@
 		</section>
 
 		<section id="intro-section" class="py-5">
-			<div class="container-fluid py-5">
+			<div class="container pt-5">
 				<div class="row">
 					<div class="col-3 text-center">
-						<img
-							class="img-fluid pb-4"
-							src="./imgs/icon-1.png"
-							alt="icon 1"
-						/>
+						<img class="img-fluid pb-4" src="./imgs/icon-1.png" alt="icon 1" />
 						<h4 class="fw-bold pb-2">Purpose</h4>
 						<p class="text-muted">
 							Lorem ipsum dolor sit amet consectetur adipisicing
@@ -80,11 +75,7 @@
 						</p>
 					</div>
 					<div class="col-3 text-center">
-						<img
-							class="img-fluid pb-4"
-							src="./imgs/icon-2.png"
-							alt="icon 2"
-						/>
+						<img class="img-fluid pb-4" src="./imgs/icon-2.png" alt="icon 2" />
 						<h4 class="fw-bold pb-2">Quality</h4>
 						<p class="text-muted">
 							Lorem ipsum dolor sit amet consectetur adipisicing
@@ -92,11 +83,7 @@
 						</p>
 					</div>
 					<div class="col-3 text-center">
-						<img
-							class="img-fluid pb-4"
-							src="./imgs/icon-3.png"
-							alt="icon 3"
-						/>
+						<img class="img-fluid pb-4" src="./imgs/icon-3.png" alt="icon 3" />
 						<h4 class="fw-bold pb-2">Function</h4>
 						<p class="text-muted">
 							Lorem ipsum dolor sit amet consectetur adipisicing
@@ -104,11 +91,7 @@
 						</p>
 					</div>
 					<div class="col-3 text-center">
-						<img
-							class="img-fluid pb-4"
-							src="./imgs/icon-4.png"
-							alt="icon 4"
-						/>
+						<img class="img-fluid pb-4" src="./imgs/icon-4.png" alt="icon 4" />
 						<h4 class="fw-bold pb-2">Elegant</h4>
 						<p class="text-muted">
 							Lorem ipsum dolor sit amet consectetur adipisicing
@@ -119,7 +102,132 @@
 			</div>
 		</section>
 
+		<section id="recent-work-section">
+			<div class="container pt-4">
+				<div class="row">
+					<div class="col-12">
+						<h4 class="fw-bold pb-1">Recent Work</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-3 py-4">
+						<img class="pb-3 img-fluid" src="./imgs/bike-400x340.jpg" alt="green bike">
+						<h5 class="fw-bold">Green Bike</h5>
+						<p class="h6 text-muted">Beautiful, Travel</p>
+					</div>
+					<div class="col-3 py-4">
+						<img class="pb-3 img-fluid" src="./imgs/surf-400x340.jpg" alt="surf">
+						<h5 class="fw-bold">Salt Of The Earth</h5>
+						<p class="h6 text-muted">Beautiful, Travel</p>
+					</div>
+					<div class="col-3 py-4">
+						<img class="pb-3 img-fluid" src="./imgs/hills-400x340.jpg" alt="hills">
+						<h5 class="fw-bold">Mountain High</h5>
+						<p class="h6 text-muted">Travel</p>
+					</div>
+					<div class="col-3 py-4">
+						<img class="pb-3 img-fluid" src="./imgs/path-400x340.jpg" alt="path">
+						<h5 class="fw-bold">When A Tree Falls</h5>
+						<p class="h6 text-muted">Beautiful</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="from-blog-section">
+			<div class="container py-5">
+				<div class="row">
+					<div class="col-12 ">
+						<h4 class="fw-bold pb-1">FROM THE BLOG</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-4 py-4">
+						<img class="pb-3 w-100" src="./imgs/cow-640x340.jpg" alt="green bike">
+						<h5 class="fw-bold">How Now</h5>
+						<p class="h6 text-muted">Posted on October 28, 2020</p>
+						<p class="text-secondary py-1">Lorem ipsum, dolor sit amet
+							consectetur adipisicing
+							elit. Minus
+							facere suscipit doloribus, quaerat debitis at vero quos, adipisci, error culpa voluptatibus dolore...
+						</p>
+					</div>
+					<div class="col-4 py-4">
+						<img class="pb-3 img-fluid" src="./imgs/sunrise-640x340.jpg" alt="surf">
+						<h5 class="fw-bold">Adrift by Simon Christen</h5>
+						<p class="h6 text-muted">Posted on September 29, 2020</p>
+						<p class="text-secondary py-1">Lorem ipsum, dolor sit amet
+							consectetur adipisicing
+							elit. Minus
+							facere suscipit doloribus, quaerat debitis at vero quos, adipisci, error culpa voluptatibus dolore...
+						</p>
+					</div>
+					<div class="col-4 py-4">
+						<img class="pb-3 w-100" src="./imgs/grass-640x340.jpg" alt="hills">
+						<h5 class="fw-bold">A Walk In The Park</h5>
+						<p class="h6 text-muted">Posted on August 10, 2020</p>
+						<p class="text-secondary py-1">Lorem ipsum, dolor sit amet
+							consectetur adipisicing
+							elit. Minus
+							facere suscipit doloribus, quaerat debitis at vero quos, adipisci, error culpa voluptatibus dolore...
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="info-section">
+			<div class="container text-light">
+				<div class="row py-5" id="info-bg">
+					<div class="col-4 pl-2 py-4">
+						<h4 class="fw-bold">My Website</h4>
+						<p class="text-secondary py-3 fs-6 lh-lg">Lorem ipsum dolor, sit amet consectetur
+							adipisicing
+							elit.
+							Natus
+							obcaecati
+							eius
+							corrupti blanditiis commodi eos. Iste officiis recusandae cupiditate quas blanditiis incidunt totam harum,
+							minima voluptatibus reprehenderit quos officia expedita minima?</p>
+					</div>
+					<div class="col-4 pl-2 py-4">
+						<h4 class="fw-bold pb-3">Recent Posts</h4>
+						<ul class=" list-unstyled">
+							<li><a href="#" class="text-decoration-none nav-link py-2">How Now</a></li>
+							<li><a href="#" class="text-decoration-none nav-link py-2">Adrift by Simon Christen</a>
+							</li>
+							<li><a href="#" class="text-decoration-none nav-link py-2">A Walk In The Park</a></li>
+							<li><a href="#" class="text-decoration-none nav-link py-2">Time To Think</a></li>
+							<li><a href="#" class="text-decoration-none nav-link py-2">Field Of Dreams</a></li>
+						</ul>
+					</div>
+					<div class="col-4 py-4">
+						<h4 class="fw-bold pb-3">Recent Work</h4>
+						<ul class="list-unstyled">
+							<li><a href="#" class="text-decoration-none nav-link py-1">Beautiful</a></li>
+							<li><a href="#" class="text-decoration-none nav-link py-1">Travel</a>
+							</li>
+							<li><a href="#" class="text-decoration-none nav-link py-1">Surreal</a></li>
+							<li><a href="#" class="text-decoration-none nav-link py-1">Thoughts</a></li>
+							<li><a href="#" class="text-decoration-none nav-link py-1">Unique</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<div class="container-fluid">
+				<div class="row bg-black text-secondary">
+					<div class="col-12 text-center py-4">
+						© 2020 ITAcademy
+					</div>
+				</div>
+			</div>
+		</footer>
+
 		<script src="js/jquery-3.6.4.slim.min.js"></script>
 		<script src="js/bootstrap.bundle.min.js"></script>
 	</body>
+
 </html>

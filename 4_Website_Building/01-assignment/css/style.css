@@ -4,6 +4,9 @@ body {
 }
 
 /****************************HEADER SECTION******************************************/
+header {
+	background-color: #f3f1ea;
+}
 
 .nav a {
 	color: grey;
@@ -35,9 +38,33 @@ body {
 #hero-section p {
 	position: absolute;
 	top: 100px;
-	left: 120px;
+	left: 190px;
 	right: 0;
 	display: block;
 	width: 40%;
 	background-color: #32c486;
+}
+
+/****************************INTRO SECTION******************************************/
+
+/****************************RECENT WORK SECTION******************************************/
+
+#recent-work-section h4,
+#from-blog-section h4 {
+	border-bottom: 1px solid grey;
+}
+
+/****************************INFO SECTION******************************************/
+
+#info-section {
+	background: #222222;
+}
+
+#info-bg ul {
+	border-top: 1px solid rgb(81, 80, 80);
+}
+
+#info-bg ul li a {
+	color: #aeadad;
+	border-bottom: 1px solid rgb(81, 80, 80);
 }
