@@ -26,6 +26,29 @@ header {
 	color: black;
 }
 
+#menu-icon {
+	width: 19px;
+	cursor: pointer;
+}
+
+@media (max-width: 768px) {
+	header {
+		font-size: 1em !important;
+	}
+	header h2 {
+		font-size: 2.2em !important;
+	}
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+	header {
+		font-size: 1em !important;
+	}
+	header h2 {
+		font-size: 1.7em !important;
+	}
+}
+
 /****************************HERO SECTION******************************************/
 #hero-section {
 	background-image: url(../imgs/hero.jpg);
@@ -43,15 +66,81 @@ header {
 	display: block;
 	width: 40%;
 	background-color: #32c486;
+	font-size: 1.7em;
 }
 
-/****************************INTRO SECTION******************************************/
+@media (max-width: 767px) {
+	#hero-section {
+		max-height: 200px;
+	}
+
+	#hero-section p {
+		position: absolute;
+		top: 75px;
+		left: 20px;
+		right: 0;
+		display: block;
+		width: 93%;
+		font-size: 1.4em;
+		background-color: #32c486;
+	}
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 768px) {
+	#hero-section {
+		max-height: 280px;
+	}
+
+	#hero-section p {
+		position: absolute;
+		top: 35px;
+		left: 80px;
+		right: 0;
+		display: block;
+		width: 63%;
+		font-size: 1.2em;
+		background-color: #32c486;
+	}
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+	#hero-section {
+		max-height: 450px;
+	}
+
+	#hero-section p {
+		position: absolute;
+		top: 60px;
+		left: 60px;
+		right: 0;
+		display: block;
+		width: 45%;
+		background-color: #32c486;
+		font-size: 1.4em;
+	}
+}
+
+@media (min-width: 1400px) {
+	#hero-section {
+		height: 500px;
+	}
+
+	#hero-section p {
+		position: absolute;
+		top: 60px;
+		left: 60px;
+		right: 0;
+		display: block;
+		width: 45%;
+		background-color: #32c486;
+		font-size: 1.6em;
+	}
+}
 
 /****************************RECENT WORK SECTION******************************************/
 
 #recent-work-section h4,
 #from-blog-section h4 {
-	border-bottom: 1px solid grey;
+	border-bottom: 1px solid rgb(189, 188, 188);
 }
 
 /****************************INFO SECTION******************************************/
@@ -67,4 +156,10 @@ header {
 #info-bg ul li a {
 	color: #aeadad;
 	border-bottom: 1px solid rgb(81, 80, 80);
+}
+
+@media (max-width: 768px) {
+	#info-section p {
+		font-size: 18px !important;
+	}
 }
