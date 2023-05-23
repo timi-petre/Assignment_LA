@@ -127,10 +127,10 @@ header {
 	#hero-section p {
 		position: absolute;
 		top: 60px;
-		left: 60px;
+		left: 140px;
 		right: 0;
 		display: block;
-		width: 45%;
+		width: 42%;
 		background-color: #32c486;
 		font-size: 1.6em;
 	}
