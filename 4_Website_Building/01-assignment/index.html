@@ -16,44 +16,82 @@
 	</head>
 
 	<body>
-		<header class="sticky-xl-top">
+		<div class="container-fluid">
+			<div class="row mx-md-5 mx-xl-4 px-xxl-5 py-3">
+				<div class="col-5 col-xl-3 col-xxl-3 align-items-xxl-start">
+					<h2 class="mx-md-4 mx-xl-3 mx-xxl-5">My Website</h2>
+				</div>
+				<div class="d-none d-xl-block col-xl-7 offset-xl-2 col-xxl-8 offset-xxl-0">
+					<ul class="navbar navbar-expand-lg justify-content-end list-unstyled">
+						<li class="nav-item px-xl-3">
+							<a class="nav-link active" href="#">Home</a>
+						</li>
+						<li class="nav-item px-xl-3">
+							<a class="nav-link" href="#recent-work-section">Portfolio</a>
+						</li>
+						<li class="nav-item px-xl-3">
+							<a class="nav-link" href="#">Staff</a>
+						</li>
+						<li class="nav-item px-xl-3">
+							<a class="nav-link" href="#intro-section">Features</a>
+						</li>
+						<li class="nav-item px-xl-3">
+							<a class="nav-link" href="#from-blog-section">Blog</a>
+						</li>
+						<li class="nav-item px-xl-3">
+							<a class="nav-link" href="#">Contact</a>
+						</li>
+						<li class="nav-item px-xl-3">
+							<a class="nav-link" href="#info-section">Download</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-7 d-xl-none text-end mt-2">
+					<img id="menu-icon" src="/imgs/menu.png" alt="menu">
+					<p class="d-inline-block px-2 px-md-0 mx-md-3">Menu</p>
+				</div>
+			</div>
+		</div>
+		</header> -->
+
+		<nav class="navbar navbar-expand-lg bg-light">
 			<div class="container-fluid">
-				<div class="row mx-md-5 mx-xl-4 px-xxl-5 py-3">
-					<div class="col-5 col-xl-3 col-xxl-3 align-items-xxl-start">
-						<h2 class="mx-md-4 mx-xl-3 mx-xxl-5">My Website</h2>
-					</div>
-					<div class="d-none d-xl-block col-xl-7 offset-xl-2 col-xxl-8 offset-xxl-0">
-						<ul class="nav justify-content-end">
-							<li class="nav-item">
-								<a class="nav-link active" href="#">Home</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#recent-work-section">Portfolio</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Staff</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#intro-section">Features</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#from-blog-section">Blog</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Contact</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#info-section">Download</a>
-							</li>
-						</ul>
-					</div>
-					<div class="col-7 d-xl-none text-end mt-2">
+				<a class="navbar-brand mx-md-4 mx-xl-3 mx-xxl-5 fs-3" href="#">My Website</a>
+				<button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+					aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<!-- <span class="navbar-toggler-icon"></span> -->
+					<div class="text-end mt-2">
 						<img id="menu-icon" src="/imgs/menu.png" alt="menu">
 						<p class="d-inline-block px-2 px-md-0 mx-md-3">Menu</p>
 					</div>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav navbar-expand-lg justify-content-end ms-auto px-4 mb-2 mb-lg-0 fs-6">
+						<li class="nav-item px-xl-3">
+							<a class="nav-link active" aria-current="page" href="#">Home</a>
+						</li>
+						<li class="nav-item px-xl-3">
+							<a class="nav-link" href="#recent-work-section">Portfolio</a>
+						</li>
+						<li class="nav-item px-xl-3">
+							<a class="nav-link" href="#">Staff</a>
+						</li>
+						<li class="nav-item px-xl-3">
+							<a class="nav-link" href="#intro-section">Features</a>
+						</li>
+						<li class="nav-item px-xl-3">
+							<a class="nav-link" href="#from-blog-section">Blog</a>
+						</li>
+						<li class="nav-item px-xl-3">
+							<a class="nav-link" href="#">Contact</a>
+						</li>
+						<li class="nav-item px-xl-3">
+							<a class="nav-link" href="#info-section">Download</a>
+						</li>
+					</ul>
 				</div>
 			</div>
-		</header>
+		</nav>
 
 		<section id="hero-section" class="text-light">
 			<div class="container">
