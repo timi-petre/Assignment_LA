@@ -3,7 +3,7 @@
 window.addEventListener('load', () => {
 	const myForm = document.getElementById('myForm');
 	const nameUser = 'new_user';
-	const passwordUser = '1';
+	const passwordUser = '123456789';
 
 	const username = document.getElementById('username');
 	const password = document.getElementById('password');
