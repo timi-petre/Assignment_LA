@@ -32,6 +32,10 @@ let student3 = new Student(
 	'Business Administration',
 );
 
-console.log(student1.getInfo());
-console.log(student2.getInfo());
-console.log(student3.getInfo());
+let student1Info = student1.getInfo();
+let student2Info = student2.getInfo();
+let student3Info = student3.getInfo();
+
+console.log(student1Info);
+console.log(student2Info);
+console.log(student3Info);
