@@ -1,9 +1,4 @@
-window.addEventListener('load', () => {
-	let dat = JSON.parse(window.localStorage.getItem('answer'))
-	return getData(dat)
-})
-
-async function getData(dat) {
+window.addEventListener('DOMContentLoaded', async () => {
 	try {
 		let response = await fetch('quiz.json')
 		if (!response.ok) {
@@ -15,45 +10,51 @@ async function getData(dat) {
 	} catch (error) {
 		console.log('Fetch problem: ' + error.message)
 	}
+})
+
+function questionsData(quizzes) {
+	const container = document.createElement('div')
+	const storedAnswers = JSON.parse(window.localStorage.getItem('answers')) || {}
+
+	for (const key in quizzes.quiz) {
+		const { question, options, answer } = quizzes.quiz[key]
+
+		const questionDiv = document.createElement('div')
+		questionDiv.innerHTML = `<h2><span>Question ${key.charAt(
+			1,
+		)}: </span>${question}</h2><br>
+		${options
+			.map(
+				item => `
+			<input type="radio" name="${key}" value="${item}" />
+			<label>${item}</label><br>
+		`,
+			)
+			.join('')}
+	`
+		const storedAnswer = storedAnswers[key]
+		if (storedAnswer) {
+			const radioInput = questionDiv.querySelector(`input[value="${storedAnswer}"]`)
+			if (radioInput) {
+				radioInput.checked = true
+			}
+		}
+
+		container.appendChild(questionDiv)
+	}
+	document.body.appendChild(container)
+
+	container.addEventListener('change', handleChange)
 }
 
-function questionsData(quizes) {
-	for (const key in quizes.quiz) {
-		const { question, options, answer } = quizes.quiz[key]
+function handleChange(event) {
+	if (event.target.type === 'radio') {
+		const q = event.target.name
+		const answer = event.target.value
 
-		const divEl = document.createElement('div')
-		divEl.innerHTML += `<h2><span>Question ${key.charAt(
-			1,
-		)}: </span> ${question} </h2></br> `
+		const storedAnswers = JSON.parse(window.localStorage.getItem('answers')) || {}
+		storedAnswers[q] = answer
 
-		let result = options
-			.map(item => {
-				return `<input checked type="radio" id="question" name=${key} value="${item}" />
-					  <label for="question">${item}</label><br />`
-			})
-			.join('')
-
-		localData()
-		divEl.innerHTML += result
-
-		document.body.append(divEl)
+		window.localStorage.setItem('answers', JSON.stringify(storedAnswers))
 	}
 }
-
-function localData() {
-	let answers = []
-	document.body.addEventListener('change', event => {
-		if (event.target.matches('input[type="radio"]')) {
-			let question = event.target.name
-			let answer = event.target.value
-
-			answers[question] = answer
-		}
-		window.localStorage.setItem('answer', JSON.stringify(answers))
-		console.log(answers)
-	})
-}
-
-// TODO - verific raspunsul
-// TODO - LocalStorage
-// TODO - Optimizare Cod
