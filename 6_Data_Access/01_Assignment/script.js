@@ -16,7 +16,6 @@ window.addEventListener('DOMContentLoaded', async () => {
 
 function displayQuestions(quizzes) {
 	const container = document.createElement('div')
-
 	const storedAnswers = JSON.parse(window.localStorage.getItem('answers')) || {}
 
 	for (const key in quizzes.quiz) {
