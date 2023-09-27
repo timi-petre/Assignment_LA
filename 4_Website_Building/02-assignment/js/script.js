@@ -1,96 +1,79 @@
-'use strict';
+'use strict'
 
-window.addEventListener('load', () => {
-	const myForm = document.getElementById('myForm');
-	const nameUser = 'new_user';
-	const passwordUser = '123456789';
+window.addEventListener('load', function () {
+	const myForm = document.getElementById('myForm')
+	const usernameInput = document.getElementById('username')
+	const passwordInput = document.getElementById('password')
+	const message = document.getElementById('msg')
 
-	const username = document.getElementById('username');
-	const password = document.getElementById('password');
+	const validUsername = 'new_user'
+	const validPassword = '123456789'
+	const errorMessages = []
 
-	let message = document.getElementById('msg');
-	message.textContent = '';
-	let arryMessage = [];
-
-	function showError(input, msg) {
-		const formGroup = input.parentElement;
-		formGroup.className = 'form-group error';
-		arryMessage.push(msg);
-		message.textContent = [...new Set(arryMessage)]
-			.map((item, index) => {
-				return `${index + 1}. ${item
-					.charAt(0)
-					.toUpperCase()}${item.slice(1)}`;
-			})
-			.join('\n');
-		return false;
-	}
-	function showSuccess(inputArray) {
-		inputArray.forEach(input => {
-			const formGroup = input.parentElement;
-			formGroup.className = 'form-group success';
-			message.textContent = '';
-			arryMessage = [];
-		});
+	function showError(inputElement, errorMsg) {
+		inputElement.parentElement.classList.add('error')
+		inputElement.parentElement.classList.remove('success')
+		errorMessages.push(errorMsg)
+		message.textContent = errorMessages.join('\n')
 	}
 
-	function checkUsername(input) {
-		if (input.value.trim() === '') {
-			showError(input, `please enter ${input.id}`);
-		} else if (input.value.trim() !== nameUser) {
-			showError(input, `please enter a valid ${input.id}`);
+	function showSuccess(inputElement) {
+		inputElement.parentElement.classList.remove('error')
+		inputElement.parentElement.classList.add('success')
+		errorMessages.length = 0
+		message.textContent = ''
+	}
+
+	function checkUsername(inputElement) {
+		const enteredUsername = inputElement.value.trim()
+
+		if (enteredUsername === '') {
+			showError(inputElement, 'Please enter a username')
+		} else if (enteredUsername !== validUsername) {
+			showError(inputElement, 'Please enter a valid username')
 		} else {
-			showSuccess([input]);
+			showSuccess(inputElement)
 		}
 	}
 
-	function checkPassword(input) {
-		if (input.value.trim() === '') {
-			showError(input, `please enter ${input.id}`);
-		} else if (input.value.trim() !== passwordUser) {
-			showError(input, `please enter a valid ${input.id}`);
+	function checkPassword(inputElement) {
+		const enteredPassword = inputElement.value.trim()
+		if (enteredPassword === '') {
+			showError(inputElement, 'Please enter a password')
+		} else if (enteredPassword !== validPassword) {
+			showError(inputElement, 'Please enter a valid password')
 		} else {
-			showSuccess([input]);
+			showSuccess(inputElement)
 		}
 	}
 
-	function succesfulLogin(
-		showSuccess,
-		username,
-		password,
-		arryMessage,
-		message,
-		myForm,
-	) {
-		showSuccess([username, password]);
-		let mesaj = 'Successful login!';
-		arryMessage.unshift(mesaj);
-		message.textContent = [...new Set(arryMessage)].splice(0, 1);
-		myForm.insertAdjacentElement('beforerend', message.textContent);
+	function successfulLogin() {
+		showSuccess(usernameInput)
+		showSuccess(passwordInput)
+		message.textContent = 'Successful login!'
 	}
 
-	myForm.addEventListener('submit', e => {
-		e.preventDefault();
-
+	myForm.addEventListener('submit', function (e) {
+		e.preventDefault()
 		if (
-			username.value.trim() === nameUser &&
-			password.value.trim() === passwordUser
+			usernameInput.value.trim() === validUsername &&
+			passwordInput.value.trim() === validPassword
 		) {
-			succesfulLogin(
-				showSuccess,
-				username,
-				password,
-				arryMessage,
-				message,
-				myForm,
-			);
+			successfulLogin()
 		} else {
-			message.textContent = '';
-			arryMessage = [];
-			checkUsername(username);
-			checkPassword(password);
+			message.textContent = ''
+			errorMessages.length = 0
+
+			checkUsername(usernameInput)
+			checkPassword(passwordInput)
 		}
-	});
-	username.addEventListener('blur', () => checkUsername(username));
-	password.addEventListener('blur', () => checkPassword(password));
-});
+	})
+
+	usernameInput.addEventListener('blur', function () {
+		checkUsername(usernameInput)
+	})
+
+	passwordInput.addEventListener('blur', function () {
+		checkPassword(passwordInput)
+	})
+})
