@@ -11,26 +11,17 @@ class Student {
 	}
 }
 
-let student1 = new Student('John Benson', 'High Park 36', '(507) 833-3567', 'Geography')
+let stud1 = new Student('John Benson', 'High Park 36', '(507) 833-3567', 'Geography')
 
-let student2 = new Student(
-	'John Doe',
-	'123 Main St',
-	'(123) 456-7890',
-	'Computer Science',
-)
+let stud2 = new Student('John Doe', '123 Main St', '(123) 456-7890', 'Computer Science')
 
-let student3 = new Student(
+let stud3 = new Student(
 	'Jane Smith',
 	'456 Elm St',
 	'(987) 654-3210',
 	'Business Administration',
 )
 
-let student1Info = student1.getInfo()
-let student2Info = student2.getInfo()
-let student3Info = student3.getInfo()
-
-console.log(student1Info)
-console.log(student2Info)
-console.log(student3Info)
+console.log(stud1.getInfo())
+console.log(stud2.getInfo())
+console.log(stud3.getInfo())
