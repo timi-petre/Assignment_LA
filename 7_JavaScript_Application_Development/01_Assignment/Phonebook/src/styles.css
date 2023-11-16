@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+	background: linear-gradient(45deg, #3a8b9e, #f7a749);
+	margin: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+app-root {
+	height: 100vh;
+	display: block;
+}

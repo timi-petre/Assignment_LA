@@ -1,0 +1,13 @@
+<input id="content" type="text" placeholder="Full Name" #content />
+<input
+	id="tel"
+	type="number"
+	placeholder="Tel."
+	max="10"
+	#tel
+	maxlength="10"
+	pattern="[0-9]{10}"
+	title="Please enter a 10-digit number"
+/>
+
+<span id="add-btn" (click)="onSubmit(content.value, tel.value)">Add</span>

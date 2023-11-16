@@ -1,0 +1,6 @@
+<div id="all-contacts" class="contacts-container">
+	<div id="all-contacts-container">
+		<span class="no-contacts-message" *ngIf="contacts.length === 0">No Contacts</span>
+		<app-contacts-all *ngIf="contacts.length > 0"></app-contacts-all>
+	</div>
+</div>
